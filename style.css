@@ -1,6 +1,209 @@
-* {
+
+body {
+    background: linear-gradient(135deg, #1a0b2e 0%, #2d1b69 50%, #4c2a85 100%);
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    color: white;
 }
 
+.header h1 {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 20px 0 10px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.game-message p {
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 1.2rem;
+    margin: 10px 0 30px 0;
+    opacity: 0.9;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+    background-color: #180e39;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 600px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border: 1px solid #404040;
+}
+
+.score-item {
+    text-align: center;
+    flex: 1;
+}
+
+.score-item .score {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: block;
+}
+
+.score-item .label {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+.score-center {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.score-center .vs {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.score-center .round {
+    font-size: 1rem;
+    opacity: 0.8;
+}
+
+.choices-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 40px auto;
+    max-width: 800px;
+    gap: 40px;
+}
+
+.your-choice, .computer-choice {
+    flex: 1;
+    text-align: center;
+}
+
+.your-choice h3, .computer-choice h3 {
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.pending-choice, .computer-display {
+    font-size: 4rem;
+    margin: 20px 0;
+}
+
+.choice-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.choice-btn {
+    width: 80px;
+    height: 80px;
+    border: none;
+    border-radius: 15px;
+    background-color: #2a2a2a;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.choice-btn:hover {
+    background-color: #404040;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.game-rules {
+    text-align: center;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #180e39;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    border: 1px solid #404040;
+}
+
+.game-rules h2 {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
+
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: linear-gradient(135deg, #2a2a2a 0%, #404040 100%);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    border: 2px solid #666;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+
+.modal h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.modal p {
+    color: #e0e0e0;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.modal-btn {
+    background: linear-gradient(135deg, #4c2a85 0%, #6b46c1 100%);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.modal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}

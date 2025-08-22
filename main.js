@@ -72,4 +72,4 @@ function playGame() {
 }
 
 // play game
-playGame();
+//playGame();

@@ -12,6 +12,58 @@
             <h1>Battle Hands</h1>
         </div>
     </div>
+    <div class="game-message">
+        <p>Battle the computer in this classic game of strategy and luck</p>
+    </div>
+    <div class="score-board">
+        <div class="score-item">
+            <span class="score">0</span>
+            <span class="label">You</span>
+        </div>
+        <div class="score-center">
+            <span class="vs">VS</span>
+            <span class="round">Round 0</span>
+        </div>
+        <div class="score-item">
+            <span class="score">0</span>
+            <span class="label">Computer</span>
+        </div>
+    </div>
+
+    <div class="choices-container">
+        <div class="your-choice">
+            <h3>Your Choice</h3>
+            <div class="pending-choice">❓</div>
+            <div class="choice-buttons">
+                <button class="choice-btn" data-choice="rock">✊</button>
+                <button class="choice-btn" data-choice="paper">✋</button>
+                <button class="choice-btn" data-choice="scissors">✌️</button>
+            </div>
+        </div>
+        
+        <div class="computer-choice">
+            <h3>Computer's Choice</h3>
+            <div class="computer-display">🤖</div>
+        </div>
+    </div>
+    
+    <div class="game-rules">
+        <h2>Game Rules</h2>
+        <p>✊ Rock beats ✌️ Scissors</p>
+        <p>✋ Paper beats ✊ Rock</p>
+        <p>✌️ Scissors beats ✋ Paper</p>
+    </div>
+
+    <div class="modal" id="endGameModal">
+        <div class="modal-content">
+            <h2 id="modalTitle">Game Over!</h2>
+            <p id="modalMessage">You won the game!</p>
+            <button class="modal-btn" id="playAgainBtn">Play Again</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
     <script src="main.js"></script>
 </body>
 </html>

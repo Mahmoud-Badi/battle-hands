@@ -4,7 +4,7 @@ A simple Rock Paper Scissors game built with HTML, CSS, and JavaScript. This pro
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://github.com/Mahmoud-Badi/battle-hands)
+[View Live Demo](http://mahmoud-badi.github.io/battle-hands)
 
 ## 🎯 Features
 
